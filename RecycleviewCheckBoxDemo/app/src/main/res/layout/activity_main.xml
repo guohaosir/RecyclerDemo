@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <RelativeLayout
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="44dp">
+        <TextView
+            android:textColor="#ffffff"
+            android:layout_centerInParent="true"
+            android:text="RecyclerView批量操作"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/btn_editor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="15dp"
+            android:text="编辑"
+            android:textColor="#ffffff"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@null"
+            android:scrollbars="vertical"/>
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/ll_mycollection_bottom_dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#e6e6e6"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="#e5e5e5"/>
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="已选择"
+                android:textColor="#1A1A1A"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/tv_select_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="9dp"
+                android:layout_toRightOf="@+id/tv"
+                android:text="0"
+                android:textColor="#1A1A1A"
+                android:textSize="14sp"/>
+
+            <Button
+                android:id="@+id/btn_delete"
+                android:layout_width="80dp"
+                android:layout_height="33dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/button_noclickable_shape"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="#b7b8bd"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/select_all"
+                android:layout_width="80dp"
+                android:layout_height="33dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:layout_toLeftOf="@+id/btn_delete"
+                android:background="@drawable/bg_selete_all"
+                android:gravity="center"
+                android:text="全选"
+                android:textColor="#000001"
+                android:textSize="14sp"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
